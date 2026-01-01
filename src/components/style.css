@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #695CFE;
+  --danger-color: #ef4444;
+  --success-color: #10b981;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.auth-page, .reg-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+.glass-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 440px;  
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.portal-logo {
+  font-size: 40px;
+  color: #695CFE;
+  margin-bottom: 10px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  color: #9ca3af;
+  z-index: 10;
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #f9fafb;
+  outline: none;
+  transition: 0.3s;
+}
+
+ .input-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239ca3af' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  cursor: pointer;
+}
+
+ .input-group i {
+  z-index: 5;
+  pointer-events: none;
+}
+
+ .reg-card {
+  max-width: 480px !important;
+}
+.input-group input:focus, .input-group select:focus {
+  border-color: #695CFE;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(105, 92, 254, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #695CFE;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #5848e0;
+  transform: translateY(-1px);
+}
+
+/* Dashboard Styles */
+
+
+
+/* ============== */
+
+
+
+ .auth-page, .reg-page, .dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-gradient);
+  padding: 20px;
+}
+
+.dashboard-page {
+  align-items: flex-start;  
+  padding: 50px 20px;
+}
+
+.glass-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+}
+
+/* --- 4. Dashboard Header --- */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 30px;
+}
+
+.refresh-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.refresh-btn:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* --- 5. Student Cards Grid --- */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.student-card {
+  padding: 30px !important;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+/* --- 6. Card Action Buttons (Edit/Delete) --- */
+.card-actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+.edit-icon, .delete-icon {
+  background: #f3f4f6;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-icon { color: var(--primary-color); }
+.delete-icon { color: var(--danger-color); }
+
+.edit-icon:hover { background: var(--primary-color); color: white; }
+.delete-icon:hover { background: var(--danger-color); color: white; }
+
+/* --- 7. Student Card Content --- */
+.portal-logo {
+  font-size: 45px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.student-card h3 {
+  color: var(--text-main);
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+
+.email-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.info-badge {
+  background: #eeebff;
+  color: var(--primary-color);
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.student-info-row {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.student-info-row i {
+  color: var(--primary-color);
+  width: 20px;
+}
+
+/* --- 8. Edit Modal UI --- */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  animation: modalFade 0.3s ease-out;
+}
+
+@keyframes modalFade {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.save-btn {
+  flex: 2;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  flex: 1;
+  background: #f3f4f6;
+  color: var(--text-main);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* --- 9. Forms & Inputs --- */
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px 14px 14px 45px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(105, 92, 254, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #5848e0;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 768px) {
+  .student-grid {
+    grid-template-columns: 1fr;
+  }
+}
