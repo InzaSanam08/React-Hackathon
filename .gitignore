@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 ./node_modules
+
+# Firebase config (ignore local config file)
+src/firebase.js
