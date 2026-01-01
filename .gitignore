@@ -25,4 +25,4 @@ dist-ssr
 ./node_modules
 
 # Firebase config (ignore local config file)
-src/firebase.js
+./src/firebase.js
